@@ -1,0 +1,30 @@
+{
+  "name": "angular-humanSeconds",
+  "version": "0.1.0",
+  "homepage": "https://github.com/tsaikd/angular-humanSeconds",
+  "authors": [
+    "tsaikd <tsaikd@gmail.com>"
+  ],
+  "description": "AngularJS filter for converting a number of seconds to a human readable time",
+  "keywords": [
+    "angular",
+    "human",
+    "readable",
+    "time",
+    "seconds",
+    "i18n"
+  ],
+  "license": "LGPLv3",
+  "dependencies": {
+    "angular": ">=1.2",
+    "angular-translate": ">=2"
+  },
+  "main": [
+    "angular-humanSeconds.min.js"
+  ],
+  "ignore": [
+    "node_modules",
+    "lib",
+    "src"
+  ]
+}
