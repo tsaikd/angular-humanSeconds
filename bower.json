@@ -1,6 +1,6 @@
 {
   "name": "angular-humanSeconds",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/tsaikd/angular-humanSeconds",
   "authors": [
     "tsaikd <tsaikd@gmail.com>"
@@ -28,6 +28,10 @@
   "ignore": [
     "node_modules",
     "lib",
-    "src"
+    "src",
+    "test",
+    "Gruntfile.js",
+    "karma.config.js",
+    "package.json"
   ]
 }

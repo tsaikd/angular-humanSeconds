@@ -5,9 +5,11 @@ angular-humanSeconds [![GitHub version](https://badge.fury.io/gh/tsaikd%2Fangula
 [![Build Status](https://travis-ci.org/tsaikd/angular-humanSeconds.png)](https://travis-ci.org/tsaikd/angular-humanSeconds)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
+[angular-translate]: https://github.com/angular-translate/angular-translate
+
 AngularJS filter for converting a number of seconds to a human readable time
 
-support i18N with angular-translate package
+support i18N with [angular-translate] package
 
 fork from https://github.com/wildlyinaccurate/angular-readable-time
 
@@ -44,3 +46,5 @@ If use zh-tw locale
 > 1 分
 >
 > 2 週
+
+If you use this module you can give it a thumbs up at http://ngmodules.org/modules/angular-humanSeconds.

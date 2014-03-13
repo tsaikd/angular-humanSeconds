@@ -18,7 +18,8 @@ app
 		if (number !== 1) {
 			text += "s";
 		}
-		return "" + number + " " + $filter("translate")(text);
+		text = "{{num}} " + text;
+		return $filter("translate")(text, {num: number});
 	};
 
 	return function (seconds) {
@@ -49,21 +50,47 @@ app
 	, function($translateProvider) {
 
 	$translateProvider
+	.translations("en", {
+		"{{num}} second":	"{{num}} second",
+		"{{num}} seconds":	"{{num}} seconds",
+		"{{num}} minute":	"{{num}} minute",
+		"{{num}} minutes":	"{{num}} minutes",
+		"{{num}} hour":		"{{num}} hour",
+		"{{num}} hours":	"{{num}} hours",
+		"{{num}} day":		"{{num}} day",
+		"{{num}} days":		"{{num}} days",
+		"{{num}} week":		"{{num}} week",
+		"{{num}} weeks":	"{{num}} weeks",
+		"{{num}} month":	"{{num}} month",
+		"{{num}} months":	"{{num}} months",
+		"{{num}} year":		"{{num}} year",
+		"{{num}} years":	"{{num}} years"
+	});
+
+}])
+
+;
+app
+
+.config(["$translateProvider"
+	, function($translateProvider) {
+
+	$translateProvider
 	.translations("zh-tw", {
-		"second": "秒",
-		"seconds": "秒",
-		"minute": "分",
-		"minutes": "分",
-		"hour": "時",
-		"hours": "時",
-		"day": "天",
-		"days": "天",
-		"week": "週",
-		"weeks": "週",
-		"month": "月",
-		"months": "月",
-		"year": "年",
-		"years": "年"
+		"{{num}} second":	"{{num}} 秒",
+		"{{num}} seconds":	"{{num}} 秒",
+		"{{num}} minute":	"{{num}} 分",
+		"{{num}} minutes":	"{{num}} 分",
+		"{{num}} hour":		"{{num}} 時",
+		"{{num}} hours":	"{{num}} 時",
+		"{{num}} day":		"{{num}} 天",
+		"{{num}} days":		"{{num}} 天",
+		"{{num}} week":		"{{num}} 週",
+		"{{num}} weeks":	"{{num}} 週",
+		"{{num}} month":	"{{num}} 月",
+		"{{num}} months":	"{{num}} 月",
+		"{{num}} year":		"{{num}} 年",
+		"{{num}} years":	"{{num}} 年"
 	});
 
 }])
