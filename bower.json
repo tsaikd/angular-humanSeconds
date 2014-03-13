@@ -19,6 +19,9 @@
     "angular": ">=1.2",
     "angular-translate": ">=2"
   },
+  "devDependencies": {
+    "angular-mocks": ">=0"
+  },
   "main": [
     "angular-humanSeconds.min.js"
   ],

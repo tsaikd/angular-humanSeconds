@@ -11,7 +11,8 @@ app
 		if (number !== 1) {
 			text += "s";
 		}
-		return "" + number + " " + $filter("translate")(text);
+		text = "{{num}} " + text;
+		return $filter("translate")(text, {num: number});
 	};
 
 	return function (seconds) {
