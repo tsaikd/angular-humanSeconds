@@ -1,3 +1,8 @@
+/* angular-humanSeconds v0.1.2 2014-03-14
+ * https://github.com/tsaikd/angular-humanSeconds
+ * License: LGPLv3
+ */
+(function(){
 var app = angular
 
 .module("humanSeconds", [
@@ -96,3 +101,4 @@ app
 }])
 
 ;
+}).call(this);
