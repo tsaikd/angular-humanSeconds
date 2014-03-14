@@ -1,9 +1,15 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
-		pkg: grunt.file.readJSON("bower.json"),
+		pkg: grunt.file.readJSON("package.json"),
 		meta: {
 			bowerrc: grunt.file.readJSON(".bowerrc"),
+			banner: [
+				"/* <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today('yyyy-mm-dd') %>",
+				" * <%= pkg.homepage %>",
+				" * License: <%= pkg.license %>",
+				" */\n"
+			].join("\n"),
 			lib: "<%= meta.bowerrc.directory %>",
 			dist: "."
 		},
@@ -14,6 +20,11 @@ module.exports = function(grunt) {
 				"<%= meta.dist %>/*.map"
 			]
 		},
+		sync: {
+			options: {
+				include: ["name", "version", "description", "authors", "license", "homepage", "main"]
+			}
+		},
 		karma: {
 			unit: {
 				configFile: "karma.config.js",
@@ -22,6 +33,10 @@ module.exports = function(grunt) {
 		},
 		concat: {
 			dist: {
+				options: {
+					banner: "<%= meta.banner %>(function(){\n",
+					footer: "\n}).call(this);"
+				},
 				src: [
 					"src/*.js",
 					"src/locale/*.js"
@@ -32,7 +47,8 @@ module.exports = function(grunt) {
 		uglify: {
 			all: {
 				options: {
-					sourceMap: true
+					sourceMap: true,
+					banner: "<%= meta.banner %>"
 				},
 				files: {
 					"<%= meta.dist %>/<%= pkg.name %>.min.js": [

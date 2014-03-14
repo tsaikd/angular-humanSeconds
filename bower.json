@@ -2,9 +2,6 @@
   "name": "angular-humanSeconds",
   "version": "0.1.1",
   "homepage": "https://github.com/tsaikd/angular-humanSeconds",
-  "authors": [
-    "tsaikd <tsaikd@gmail.com>"
-  ],
   "description": "AngularJS filter for converting a number of seconds to a human readable time",
   "keywords": [
     "angular",
@@ -33,5 +30,8 @@
     "Gruntfile.js",
     "karma.config.js",
     "package.json"
+  ],
+  "authors": [
+    "tsaikd <tsaikd@gmail.com>"
   ]
 }
