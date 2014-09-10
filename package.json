@@ -1,6 +1,6 @@
 {
   "name": "angular-humanSeconds",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "AngularJS filter for converting a number of seconds to a human readable time",
   "devDependencies": {
     "grunt": ">=0",

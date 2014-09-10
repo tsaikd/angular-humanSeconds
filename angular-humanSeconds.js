@@ -1,4 +1,4 @@
-/* angular-humanSeconds v0.1.2 2014-03-14
+/* angular-humanSeconds v0.1.3 2014-09-10
  * https://github.com/tsaikd/angular-humanSeconds
  * License: LGPLv3
  */
@@ -71,6 +71,8 @@ app
 		"{{num}} year":		"{{num}} year",
 		"{{num}} years":	"{{num}} years"
 	});
+
+	$translateProvider.use("en");
 
 }])
 
