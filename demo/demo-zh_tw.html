@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-TW" ng-app="demoHumanSeconds">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Simple online lxc-docker web ui, use html storage to handle connection config">
+		<title>angular-humanSeconds demo(zh_tw)</title>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.js"></script>
+		<script src="//rawgithub.com/angular-translate/bower-angular-translate/master/angular-translate.js"></script>
+		<script asrc="//rawgithub.com/tsaikd/angular-humanSeconds/master/angular-humanSeconds.js"></script>
+		<script src="../angular-humanSeconds.js"></script>
+	</head>
+	<body ng-controller="DemoCtrl" style="padding: 10px;">
+		<div>
+			<span>{{ 1 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>1 秒</span>
+		</div>
+		<div>
+			<span>{{ 9 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>9 秒</span>
+		</div>
+		<div>
+			<span>{{ 1*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>1 分</span>
+		</div>
+		<div>
+			<span>{{ 9*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>9 分</span>
+		</div>
+		<div>
+			<span>{{ 1*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>1 時</span>
+		</div>
+		<div>
+			<span>{{ 9*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>9 時</span>
+		</div>
+		<div>
+			<span>{{ 1*24*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>1 天</span>
+		</div>
+		<div>
+			<span>{{ 3*24*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>3 天</span>
+		</div>
+		<div>
+			<span>{{ 9*24*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>1 週</span>
+		</div>
+		<div>
+			<span>{{ 15*24*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>2 週</span>
+		</div>
+		<div>
+			<span>{{ 33*24*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>1 月</span>
+		</div>
+		<div>
+			<span>{{ 66*24*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>2 月</span>
+		</div>
+		<div>
+			<span>{{ 366*24*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>1 年</span>
+		</div>
+		<div>
+			<span>{{ 900*24*60*60 | humanSeconds }}</span>
+			<span>should be</span>
+			<span>2 年</span>
+		</div>
+		<script type="text/javascript">
+angular
+.module("demoHumanSeconds", [
+	"pascalprecht.translate",
+	"humanSeconds"
+])
+.controller("DemoCtrl", [
+	        "$translate",
+	function($translate) {
+		// default language is "en"
+		$translate.use("zh_tw");
+	}
+])
+		</script>
+	</body>
+</html>

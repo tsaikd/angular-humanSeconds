@@ -21,6 +21,8 @@ app
 		"{{num}} years":	"{{num}} years"
 	});
 
+	$translateProvider.use("en");
+
 }])
 
 ;
